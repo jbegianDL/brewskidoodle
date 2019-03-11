@@ -6,7 +6,8 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class NameService {
-    public BreweryDetails fetchAdviceData(){
+    public BreweryDetails fetchNameData(){
+        System.setProperty("http.agent", "name");
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject("https://api.openbrewerydb.org/breweries?by_name=Arcadia Brewing Co", BreweryDetails.class);
     }

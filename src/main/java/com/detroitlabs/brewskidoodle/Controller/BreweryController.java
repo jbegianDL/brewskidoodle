@@ -1,5 +1,6 @@
 package com.detroitlabs.brewskidoodle.Controller;
 
+import com.detroitlabs.brewskidoodle.Model.BreweryList;
 import com.detroitlabs.brewskidoodle.Service.NameService;
 import com.detroitlabs.brewskidoodle.Service.StateService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,11 @@ public class BreweryController {
     @RequestMapping("list")
     @ResponseBody
     public String displayBreweryList(){
-        String text = "hello";
-        return text;
+        BreweryList breweries = stateService.fetchStateData();
+        String breweryName = breweries.get(1).getName();
+        String listSize = String.valueOf(breweries.size());
+
+        return breweryName + listSize;
     }
 
 }
