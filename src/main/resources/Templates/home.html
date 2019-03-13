@@ -14,8 +14,10 @@
     <div class="homepage-beer">
         <img src="/images/beer.gif"/>
     </div>
-    <input type="text" placeholder="Search Brewery by State..." name="search">
+    <form action="list" method="get">
+    <input name="stateName" type="search" placeholder="Search Brewery by State..." required="required" autocomplete="off"/>
     <button type="submit">Find my Brewski</button>
+    </form>
 </div>
 
 </body>
