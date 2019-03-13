@@ -26,4 +26,9 @@ public class BreweryController {
         return breweryName + listSize;
     }
 
+    @RequestMapping("/")
+    public String returnHome(){
+     return "home";
+    }
+
 }
