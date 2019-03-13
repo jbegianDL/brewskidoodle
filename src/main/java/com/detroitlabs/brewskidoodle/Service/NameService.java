@@ -1,7 +1,6 @@
 package com.detroitlabs.brewskidoodle.Service;
 
 import com.detroitlabs.brewskidoodle.Model.BreweryDetails;
-import com.detroitlabs.brewskidoodle.Model.BreweryList;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
