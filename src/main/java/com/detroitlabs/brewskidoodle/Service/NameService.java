@@ -1,14 +1,15 @@
 package com.detroitlabs.brewskidoodle.Service;
 
 import com.detroitlabs.brewskidoodle.Model.BreweryDetails;
+import com.detroitlabs.brewskidoodle.Model.BreweryList;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
 public class NameService {
-    public BreweryDetails fetchNameData(){
+    public BreweryDetails fetchNameData(int breweryId){
         System.setProperty("http.agent", "name");
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject("https://api.openbrewerydb.org/breweries?by_name=Arcadia Brewing Co", BreweryDetails.class);
+        return restTemplate.getForObject("https://api.openbrewerydb.org/breweries/" + breweryId, BreweryDetails.class);
     }
 }
