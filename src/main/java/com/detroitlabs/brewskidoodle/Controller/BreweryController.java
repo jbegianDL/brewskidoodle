@@ -31,4 +31,9 @@ public class BreweryController {
      return "home";
     }
 
+    @RequestMapping("/details")
+    public String returnDetails(){
+        return "details";
+    }
+
 }
