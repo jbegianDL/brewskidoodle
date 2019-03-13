@@ -3,8 +3,6 @@ package com.detroitlabs.brewskidoodle.Model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.ArrayList;
-
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BreweryDetails {
     private  int id;
@@ -12,9 +10,9 @@ public class BreweryDetails {
     private String street;
     private String city;
     private String state;
-    private String postalCode; //TODO JSON Property postal_code
+    private String postalCode;
     private String phone;
-    private String websiteUrl; //TODO JSON Property website_url
+    private String websiteUrl;
 
     public int getId() {
         return id;
