@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Brewery Name Here</title>
 </head>
 
 <body>
-<p>Street</p>
-<p>City</p>
-<p>State</p>
-<p>Postal Code</p>
-<p>Phone Number</p>
-<p>Website</p>
+<p>Address:</p>
+<p th:text="${breweryDetails.getStreet()}"></p>
+<p th:text="${breweryDetails.getCity()} + ', ' + ${breweryDetails.getState()} + ' ' + ${breweryDetails.getPostalCode()}"></p>
+<p>Phone Number: </p>
+<p th:text="${breweryDetails.getPhone()}"></p>
+<a th:href="${breweryDetails.getWebsiteUrl()}" th:text="${breweryDetails.getWebsiteUrl()}"></a>
+<a th:href="list">Back to List</a>
 
 </body>
 </html>

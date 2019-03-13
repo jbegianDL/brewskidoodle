@@ -1,11 +1,13 @@
 package com.detroitlabs.brewskidoodle.Model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class BreweryDetails {
+    private  int id;
     private String name;
     private String street;
     private String city;
@@ -13,6 +15,14 @@ public class BreweryDetails {
     private String postalCode; //TODO JSON Property postal_code
     private String phone;
     private String websiteUrl; //TODO JSON Property website_url
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -46,10 +56,12 @@ public class BreweryDetails {
         this.state = state;
     }
 
+    @JsonProperty("postal_code")
     public String getPostalCode() {
         return postalCode;
     }
 
+    @JsonProperty("postal_code")
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
@@ -62,10 +74,12 @@ public class BreweryDetails {
         this.phone = phone;
     }
 
+    @JsonProperty("website_url")
     public String getWebsiteUrl() {
         return websiteUrl;
     }
 
+    @JsonProperty("website_url")
     public void setWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
     }
