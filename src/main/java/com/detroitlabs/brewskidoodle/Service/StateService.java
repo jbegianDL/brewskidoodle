@@ -6,9 +6,9 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class StateService {
-    public BreweryList fetchStateData(){
+    public BreweryList fetchStateData(String stateName){
         System.setProperty("http.agent", "state");
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.getForObject("https://api.openbrewerydb.org/breweries?by_state=michigan", BreweryList.class);
+        return restTemplate.getForObject("https://api.openbrewerydb.org/breweries?by_state=" + stateName, BreweryList.class);
     }
 }

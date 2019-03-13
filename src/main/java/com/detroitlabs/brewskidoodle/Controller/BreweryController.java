@@ -21,8 +21,8 @@ public class BreweryController {
     StateService stateService;
 
     @RequestMapping("list")
-    public String displayBreweryList(ModelMap modelMap){
-        BreweryList breweries = stateService.fetchStateData();
+    public String displayBreweryList(@RequestParam("stateName") String stateName, ModelMap modelMap){
+        BreweryList breweries = stateService.fetchStateData(stateName);
         modelMap.put("breweries", breweries);
 
         return "list";
