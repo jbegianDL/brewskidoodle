@@ -1,0 +1,28 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,700,900);
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: center;
+    background-image: url(images/bubbles.gif);
+
+}
+
+h1 {
+    font-size: 45pt;
+}
+
+h2 {
+    margin-top: -30px;
+    font-size: 27pt;
+}
+
+.homepage-beer {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+}
