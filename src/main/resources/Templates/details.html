@@ -13,7 +13,9 @@
 <p>Phone Number: </p>
 <p th:text="${breweryDetails.getPhone()}"></p>
 <a th:href="${breweryDetails.getWebsiteUrl()}" th:text="${breweryDetails.getWebsiteUrl()}"></a>
-<a th:href="list">Back to List</a>
+
+<br>
+<a th:href="'list?stateName=' + ${breweryDetails.getState()}">Back to List</a>
 
 </body>
 </html>
