@@ -3,12 +3,20 @@
 <head th:fragment="headerFragment">
     <link rel="stylesheet" th:href="@{/app.css}" />
     <meta charset="UTF-8"/>
+
     <div th:each="BreweryDetails : ${breweries}">
     <title th:text="${BreweryDetails.getState()}"></title>
     </div>
+
 </head>
 <body>
-    <div th:each="BreweryDetails : ${breweries}">
+<div class="container">
+    <form action="/" method="get">
+        <button type="submit" class="homeButton">Home</button>
+    </form>
+
+</div>
+    <div th:each="BreweryDetails : ${breweries}" class="breweryList">
         <form action="details" method="get">
         <input type="submit" th:value="${BreweryDetails.getName()}" class="breweryButton">
             <input type="hidden" name="breweryId" th:value="${BreweryDetails.getId()}"/>
