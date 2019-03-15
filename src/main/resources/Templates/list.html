@@ -12,7 +12,7 @@
     </form>
 
 </div>
-    <div th:each="BreweryDetails : ${breweries}">
+    <div th:each="BreweryDetails : ${breweries}" class="breweryList">
         <form action="details" method="get">
         <input type="submit" th:value="${BreweryDetails.getName()}" class="breweryButton">
             <input type="hidden" name="breweryId" th:value="${BreweryDetails.getId()}"/>
