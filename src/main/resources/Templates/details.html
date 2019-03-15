@@ -7,15 +7,25 @@
 </head>
 
 <body>
+<div class="detailpage-beer">
+    <img src="/images/beerbottle.gif"/>
+</div>
+<p class="details-name" th:text="${breweryDetails.getName()}"></p>
+
+
+<div class="detail-items">
 <p>Address:</p>
 <p th:text="${breweryDetails.getStreet()}"></p>
 <p th:text="${breweryDetails.getCity()} + ', ' + ${breweryDetails.getState()} + ' ' + ${breweryDetails.getPostalCode()}"></p>
 <p>Phone Number: </p>
 <p th:text="${breweryDetails.getPhone()}"></p>
+    <br>
 <a th:href="${breweryDetails.getWebsiteUrl()}" th:text="${breweryDetails.getWebsiteUrl()}"></a>
+</div>
 
 <br>
 <a th:href="'list?stateName=' + ${breweryDetails.getState()}">Back to List</a>
+
 
 </body>
 </html>
