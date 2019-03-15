@@ -6,13 +6,11 @@
     <title>Title</title>
 </head>
 <body>
-<ul>
     <div th:each="BreweryDetails : ${breweries}">
         <form action="details" method="get">
-        <li th:text="${BreweryDetails.getName()}"></li>
-            <input type="submit" name="breweryId" th:value="${BreweryDetails.getId()}"/>
+        <input type="submit" th:value="${BreweryDetails.getName()}" class="breweryButton">
+            <input type="hidden" name="breweryId" th:value="${BreweryDetails.getId()}"/>
         </form>
     </div>
-</ul>
 </body>
 </html>
