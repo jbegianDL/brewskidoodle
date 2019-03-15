@@ -3,9 +3,15 @@
 <head>
     <link rel="stylesheet" th:href="@{/app.css}" />
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>Breweries</title>
 </head>
 <body>
+<div class="container">
+    <form action="/" method="get">
+        <button type="submit" class="homeButton">Home</button>
+    </form>
+
+</div>
     <div th:each="BreweryDetails : ${breweries}">
         <form action="details" method="get">
         <input type="submit" th:value="${BreweryDetails.getName()}" class="breweryButton">
