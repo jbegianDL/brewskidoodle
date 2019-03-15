@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
+<head th:fragment="headerFragment">
     <link rel="stylesheet" th:href="@{/app.css}" />
     <meta charset="UTF-8"/>
-    <title>Brewery Name Here</title>
+    <title th:text="${breweryDetails.getName()}"></title>
 </head>
 
 <body>
