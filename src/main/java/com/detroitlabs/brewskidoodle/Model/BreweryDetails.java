@@ -65,7 +65,8 @@ public class BreweryDetails {
     }
 
     public String getPhone() {
-        return phone;
+        String formattedPhone = phone.replaceFirst("(\\d{3})(\\d{3})(\\d+)", "($1) $2-$3");
+        return formattedPhone;
     }
 
     public void setPhone(String phone) {
