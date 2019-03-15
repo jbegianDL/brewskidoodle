@@ -46,3 +46,29 @@ h2 {
     padding-bottom: 30px;
 }
 
+p {
+    font-size: 20px;
+
+}
+
+p.details-name {
+
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom:  10px;
+}
+
+.detailpage-beer img {
+
+    padding-top: 0px;
+    height: 200px;
+    width: auto;
+
+}
+
+.detail-items p{
+
+    padding-top: -20px;
+    margin: 10px;
+}
+
